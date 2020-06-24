@@ -1,5 +1,5 @@
 test:
-	deno test --allow-net init.ts
+	deno test --allow-net --allow-env
 
 bundle:
 	deno bundle worldtides.ts > bundle.js

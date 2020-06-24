@@ -67,10 +67,11 @@ type apiResponse = {
   stations?: {
     id: string,
     name: string,
-    lat: number,
-    lon: number,
+    lat: string,
+    lon: string,
     timezone: string,
   }[],
+  stationDistance?: number,
   heights: {
     dt: number,
     date: string,
@@ -89,7 +90,7 @@ type apiResponse = {
 }
 
 export class Worldtides {
-  parameters: parameters
+  private parameters: parameters
   constructor(parameters: parameters & { key: string }) {
     this.parameters= parameters
   }
@@ -103,7 +104,6 @@ export class Worldtides {
 
   public async request(parameters: parameters): Promise<apiResponse> {
     const url = this.buildUrl(parameters)
-    console.log('url', url)
     const result = await fetch(
       url
     )
