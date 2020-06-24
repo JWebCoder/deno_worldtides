@@ -1,6 +1,6 @@
 # Deno WorldTides API Wrapper
 
-This is a wrapper for the [WorldTides API](https://worldtides.info)  to retrieve tidal data
+This is a wrapper for the [WorldTides API](https://worldtides.info) to retrieve tidal data
 
 ## Usage
 
